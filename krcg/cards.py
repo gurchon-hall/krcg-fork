@@ -353,6 +353,7 @@ class Card(utils.i18nMixin, utils.NamedMixin):
         self.adv: bool = False
         self.group: Optional[str] = None
         self.title: Optional[str] = None
+        self.path: Optional[str] = None
         self.pool_cost: Optional[str] = None
         self.blood_cost: Optional[str] = None
         self.conviction_cost: Optional[str] = None
@@ -607,6 +608,7 @@ class Card(utils.i18nMixin, utils.NamedMixin):
         self.adv = bool_or_false("Adv")
         # group can be "any"
         self.group = str_or_none("Group")
+        self.path = str_or_none("Path")
         self.title = str_or_none("Title")
         if self.title and self.title[0] not in ["1", "2", "3", "4", "5"]:
             self.title = self.title.title()
